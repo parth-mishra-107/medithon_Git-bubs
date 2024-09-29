@@ -15,9 +15,92 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .navbar {
-            background-color: rgba(255, 255, 255, 0.5); /* Translucent white */
+            background-color: rgba(255, 255, 255, 0.8); /* Translucent white */
         }
     </style>
+
+
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appointment Scheduler</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+    input[type="text"], input[type="email"], input[type="date"], input[type="time"], textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    input[type="submit"] {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    input[type="submit"]:hover {
+        background-color: #218838;
+    }
+</style>-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule a Meeting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px; /* Increased width */
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
       <style>
           *{
               font-family: 'Poppins' , sans-serif;
@@ -48,10 +131,11 @@
 
 
 </head>
-<body>
+<body class="bg-light">
+    <?php require('inc/header.php');?>
+
 
 <!--NAVBAR-->
-
 <nav class="navbar navbar-expand-lg navbar-light px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">SUGAR Daddy</a>
@@ -67,18 +151,7 @@
                     <a class="nav-link me-2" href="#">Insulin Schedule</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="#">Lifestyle</a>
-                </li>
-                <li class="nav-item">
-                    <!--<a class="nav-link me-2" href="#"><div class="button-container">
-                        <a href="https://www.youtube.com" target="_blank" class="btn btn-primary">Awareness</a>
-                    </div></a>-->
-                    <div class="button-container">
-                        <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="btn btn-primary">Awareness</a>
-                    </div>
-
-                    
-
+                    <a class="nav-link me-2" href="Awareness.php">Awareness</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link me-2" href="#">Contact Us</a>
@@ -123,7 +196,7 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    </nav> 
+    </nav>
 
     <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -250,7 +323,10 @@
     </div>
   </div>
 </div>
+
 <!-- images -->
+
+
 <!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -382,24 +458,24 @@
 <div class="container">
   <div class="row justify_content_evenly px-lg-0 px-md-0 px-5">
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-      <img src="images/features/wifi.svg" width="80px">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoT3gAszeJeRlVDkJ_QgpHwNInaM-u0o5s-w&s" width="80px">
       <h5 class="mt-3">Sugar tracking System</h5>
     </div>
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-      <img src="images/features/wifi.svg" width="80px">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHKk_Sxe8l_pKAIaaXs_VA3JBkqkWDQMEYdg&s" width="80px">
       <h5 class="mt-3">Insulin schedule</h5>
     </div>
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-      <img src="images/features/wifi.svg" width="80px">
+      <img src="https://edfn.org/wp-content/uploads/2024/05/GlucoRx-414x224.jpg" width="80px">
       <h5 class="mt-3">Community</h5>
     </div>
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-      <img src="images/features/wifi.svg" width="80px">
+      <img src="https://heritagehospitals.com/blog/wp-content/uploads/2023/07/diabetes-plate-optimized.jpeg" width="80px">
       <h5 class="mt-3">Customized diet plans</h5>
     </div>
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-      <img src="images/features/wifi.svg" width="80px">
-      <h5 class="mt-3"> </h5>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDZQdbiR8SMQdzJH6KZft9y7mAIqxSplmcoQ&s" width="80px">
+      <h5 class="mt-3">Personalised test</h5>
     </div>
   </div>
 </div>
@@ -459,7 +535,7 @@
 
 
 <!--check avaiability form -->
-<div class = "container">
+<!--<div class = "container">
     <div class="row">
         <div class="col-lg-12 bg-white shadow p-4 rounded">
         <h5>Schedule your doctor's Appointment</h5>
@@ -474,7 +550,7 @@
                     <input type="date" class = "form-control shadow-none">
                 </div>
 
-                <!--<div class="col-lg-3">
+                <div class="col-lg-3">
                     <label class="form-label" style="font-weight: 500;">Students</label>
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Open this select menu</option>
@@ -482,7 +558,7 @@
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                     </select>
-                </div>-->
+                </div>
 
                 <div class="col-lg-1">
                     <button type="submit" class="btn text-black shadow-none custom-bg">Submit</button>
@@ -490,25 +566,48 @@
             </div>
         </form>      
     </div>
+</div>-->
+
+<div class="container">
+    <h1>Schedule an Appointment</h1>
+    <form action="/schedule-appointment" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">Appointment Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Appointment Time</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="details">Additional Details</label>
+        <textarea id="details" name="details" rows="4"></textarea>
+
+        <input type="submit" value="Schedule Appointment">
+    </form>
 </div>
 
+<!--FOOTER DESIGN-->
 
-div class="container-fluid bg-white mt-5">
+<div class="container-fluid bg-white mt-5">
     <div class="row">
-      <div class="col-lg-4 p-4">
+      <div class="col-lg-0 p-4">
   
       </div>
-      <div class="col-lg-4 p-4">
-        <h3 class="h-font fw-bold fs-3 mb=2 ">VENUE Booking</h3>
+      <div class="col-lg-6 p-4">
+        <h3 class="h-font fw-bold fs-3 mb-2 ">SUGAR Daddy</h3>
         <p>
-          Gentle reminder to always maintain acadmic honesty .Any kind of malpractice will not be tolerated under any circumstances.
+          Sugar daddy cause daddy will always take care of you.
         </p>
       </div>
-      <div class="col-lg-4 p-4">
-        <h5class= "mb-3">Links</h5>
+      <div class="col-lg-6 p-4">
+        <h5 class= "mb-3">Links</h5>
         <a href="#"class="d-inline-block mb-2 text-dark text-decoration-none">Home-page</a>
-        <a href="#"class="d-inline-block mb-2 text-dark text-decoration-none">Venue</a>
-        <a href="#"class="d-inline-block mb-2 text-dark text-decoration-none">Facilities</a>
+        <a href="#"class="d-inline-block mb-2 text-dark text-decoration-none">Insulin system</a>
+        <a href="#"class="d-inline-block mb-2 text-dark text-decoration-none">Awareness</a>
         <a href="#"class="d-inline-block mb-2 text-dark text-decoration-none">Contact us</a>
         <a href="#"class="d-inline-block mb-2 text-dark text-decoration-none">About</a>
   
@@ -519,4 +618,4 @@ div class="container-fluid bg-white mt-5">
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>    
-</html>   
+</html>
