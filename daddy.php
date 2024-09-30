@@ -132,32 +132,31 @@
 
 </head>
 <body class="bg-light">
-    <?php require('inc/header.php');?>
 
 
 <!--NAVBAR-->
-<nav class="navbar navbar-expand-lg navbar-light px-lg-3 py-lg-2 shadow-sm sticky-top">
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">SUGAR Daddy</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">  
                 <li class="nav-item">
                     <a class="nav-link active me-2" aria-current="page" href="#">Home-page</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="#">Insulin Schedule</a>
+                    <a class="nav-link me-2" href="management.php">Insulin Management</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link me-2" href="Awareness.php">Awareness</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="#">Contact Us</a>
+                    <a class="nav-link me-2" href="Contactus.php">Contact-Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="#">About</a>
+                    <a class="nav-link me-2" href="About.php">About</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -214,9 +213,9 @@
       </div>
       <div class="modal-body">
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">login number</label>
-        <input type="test" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Gentle reminder to always maintain acadmic honesty .Any kind of malpractice will not be tolerated under any circumstances.
+        <label for="exampleInputEmail1" class="form-label">E-mail address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Enter the registered e-mail Id.
 
         </div>
         <div class="mb-3">
@@ -225,7 +224,7 @@
 
         </div>
         <div>
-            <button type="submit" class="btl b">Log-In</button>
+            <a href="data2.php" class="btn btn-primary">Log-In</a>
             <a href="javascript: void(0)">Forgot Password</a>
 
         </div>
@@ -238,7 +237,7 @@
 <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal_lg">
     <div class="modal-content">
-        <form action="">
+        <form id="register-form">
         <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLabel">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-hearts" viewBox="0 0 16 16">
@@ -252,12 +251,20 @@
       <div class="modal-body">
       <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" class="form-control" id="name" required>
+            <input name ="name" type="text" class="form-control" id="name" required>
         </div>
         <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" class="form-control" id="phone" required>
+            <input name ="phonenum"  type="tel" class="form-control" id="phone" required>
         </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Address</label>
+            <textarea name="address" class="form-control shadow-none" rows ="1" required></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Pincode</label>
+                <input name="pincode" type="number"class="form-control shadow-none" required>
+                </div>
         <div class="form-group">
             <label for="diabetesType">Diabetes Type</label>
             <select class="form-control" id="diabetesType" required>
@@ -309,13 +316,18 @@
         </div>
         <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+        <input name = "pass" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 
         </div>
         <div>
-            <button type="submit" class="btl b">Register</button>
-            <a href="javascript: void(0)">Confirm Password</a>
+            <label for="exampleInputEmail1" class="form-label">Confirm Password</label>
+        <input name = "cpass" type="password" class="form-control shadow-none" required>
 
+        </div>
+        <div>
+            <a href="data.php" class="btn btn-primary">Register</a>
+        </div>
+        
         </div>
       </div>
         </form>
@@ -437,6 +449,7 @@
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
       <script>
+
         var swiper = new Swiper(".swiper-container", {
           spaceBetween: 30,
           effect: "fade",
@@ -490,13 +503,11 @@
       <img src="https://i.pinimg.com/564x/f6/d9/7c/f6d97cd053caafe7274f22279c0f8a53.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">STANDARD</h5>
-
-
         
         <p class="card-text">Health plans</p>
         <p class="card-text">Booking Appointments</p>
-        <p class="card-text">Life-style suggestions</p>
-        <a href="#" class="btn btn-primary">FREE</a>
+        <p class="card-text">Life-style suggestions</p><a href="data.php" class="btn btn-primary" target="_blank">FREE</a>
+
       </div>
     </div>
       <h5 class="mt-3">PLAN 1</h5>
@@ -520,7 +531,7 @@
     
         <h6 class="featrures mb-4">
         <p class="card-text"></p>
-        <a href="#" class="btn btn-primary">PAY($9.99)</a>
+        <a href="pay.php" class="btn btn-primary">PAY($9.99)</a>
       </div>
     </div>
       <h5 class="mt-3">PLAN 2</h5>
@@ -586,7 +597,7 @@
         <label for="details">Additional Details</label>
         <textarea id="details" name="details" rows="4"></textarea>
 
-        <input type="submit" value="Schedule Appointment">
+        <a href="something.php">Submit</a>
     </form>
 </div>
 
@@ -600,22 +611,26 @@
       <div class="col-lg-6 p-4">
         <h3 class="h-font fw-bold fs-3 mb-2 ">SUGAR Daddy</h3>
         <p>
-          Sugar daddy cause daddy will always take care of you.
+          Sugar daddy : cause daddy will always take care of you.
         </p>
       </div>
       <div class="col-lg-6 p-4">
         <h5 class= "mb-3">Links</h5>
         <a href="#"class="d-inline-block mb-2 text-dark text-decoration-none">Home-page</a>
-        <a href="#"class="d-inline-block mb-2 text-dark text-decoration-none">Insulin system</a>
-        <a href="#"class="d-inline-block mb-2 text-dark text-decoration-none">Awareness</a>
-        <a href="#"class="d-inline-block mb-2 text-dark text-decoration-none">Contact us</a>
-        <a href="#"class="d-inline-block mb-2 text-dark text-decoration-none">About</a>
+        <a href="management.php"class="d-inline-block mb-2 text-dark text-decoration-none">Insulin Management</a>
+        <a href="Awareness.php"class="d-inline-block mb-2 text-dark text-decoration-none">Awareness</a>
+        <a href="Contactus.php"class="d-inline-block mb-2 text-dark text-decoration-none">Contact us</a>
+        <a href="About.php"class="d-inline-block mb-2 text-dark text-decoration-none">About</a>
   
       </div>
     </div>
   </div>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+     </script>
+</script>
+
+
 </body>    
 </html>
